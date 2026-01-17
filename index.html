@@ -3,34 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>Wonderful Branding — Brand it, but make it magical</title>
+
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    <!-- Google Fonts: Montserrat -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
-</style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #5C4F70;
-      font-family: 'Montserrat', sans-serif;
+      background-color: #0B0F1A;
+      font-family: Arial, sans-serif;
     }
 
+    /* Desktop (PDF embutido) */
     .pdf-desktop {
       display: block;
       width: 100%;
       height: 100%;
+      border: none;
     }
 
+    /* Mobile (experiência controlada) */
     .pdf-mobile {
       display: none;
       height: 100%;
@@ -40,16 +37,31 @@
       box-sizing: border-box;
     }
 
-    .pdf-mobile a {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      border: 1px solid #fff;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1rem;
+    .logo {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 1.5rem;
+      display: block;
     }
 
+    .tagline {
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      opacity: 0.85;
+      margin-bottom: 2.5rem;
+    }
+
+    .pdf-mobile a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* Breakpoint mobile */
     @media (max-width: 768px) {
       .pdf-desktop {
         display: none;
@@ -65,18 +77,24 @@
 
 <body>
 
-  <!-- Desktop -->
-  <iframe 
+  <!-- DESKTOP -->
+  <iframe
     class="pdf-desktop"
     src="wonderful-branding.pdf">
   </iframe>
 
-  <!-- Mobile -->
+  <!-- MOBILE -->
   <div class="pdf-mobile">
-    <h1>Wonderful Branding</h1>
-    <p>Brand it, but make it magical.</p>
+    <img
+      src="logo-wonderful.svg"
+      alt="Wonderful Branding"
+      class="logo"
+    />
+
+    <p class="tagline">Brand it, but make it magical.</p>
+
     <a href="wonderful-branding.pdf" target="_blank">
-      Abrir apresentação
+      Conheça nossa mágia
     </a>
   </div>
 
